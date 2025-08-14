@@ -10,8 +10,9 @@ import MicOffIcon from '@mui/icons-material/MicOff';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import ChatIcon from '@mui/icons-material/Chat';
+import server from "../environment"; // Adjust the import path as necessary
 
-const server_url = "http://localhost:8000"; // fixed for socket.io
+const server_url = server.prod; // fixed for socket.io
 var connections = {};
 const peerConfigConnections = {
     iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
